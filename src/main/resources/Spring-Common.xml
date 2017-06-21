@@ -1,0 +1,13 @@
+<!-- Spring-Common.xml -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="OutputHelper" class="com.example.looseCoupling.OutputHelper">
+		<property name="outputGenerator" ref="JsonOutputGenerator" />
+	</bean>
+	<bean id="CsvOutputGenerator" class="com.example.looseCoupling.CsvOutputGenerator" />
+	<bean id="JsonOutputGenerator" class="com.example.looseCoupling.JsonOutputGenerator" />
+
+</beans>
